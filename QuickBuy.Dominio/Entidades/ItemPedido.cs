@@ -7,12 +7,16 @@ namespace QuickBuy.Dominio.Entidades
     public class ItemPedido :Entidade
     {
         public int Id { get; set; }
-        public int produtodId { get; set; }
+        public int ProdutoId { get; set; }
         public decimal Quantidade { get; set; }
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            if (ProdutoId == 0)  
+              AdicionarCritica("Não Foi indentificado qual a referência do produto");
+
+            if ( Quantidade == 0)
+                AdicionarCritica("Não Foi indentificado qual a referência do produto");
         }
     }
 }
