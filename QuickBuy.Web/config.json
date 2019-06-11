@@ -1,0 +1,14 @@
+{
+    "ConnectionStrings": {
+        "QuickBuyDB": "User=SYSDBA;Password=masterkey;Database=C:\\Banco de Dados\\Bases\\atrativa.PLV;DataSource=LUIS-NOTE;Port=3070;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=1;"
+
+        // "providerName=\"FirebirdSql.Data.FirebirdClient\""
+
+        //"database=LUIS-NOTE/3070:C:\\Banco de Dados\\Bases\\atrativa.PLV;user=sysdba;password=masterkey"
+
+        //"User=SYSDBA;Password=masterkey;Database=LUIS-NOTE/3070:C:\Banco de Dados\Bases\atrativa.PLV;DataSource=localhost;Port=3070;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet size=8192;ServerType=0;" providerName="FirebirdSql.Data.FirebirdClient" />
+
+
+    }
+
+}  

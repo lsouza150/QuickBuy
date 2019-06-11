@@ -3,25 +3,38 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using QuickBuy.Repositorio.Contexto;
 
 namespace QuickBuy.Web
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
 
         public IConfiguration Configuration { get; }
 
+        public Startup(IConfiguration configuration)
+        {
+            var Builder = new ConfigurationBuilder();
+            Builder.AddJsonFile("config.json",optional:false ,reloadOnChange :true );
+
+            Configuration = Builder.Build();
+        }
+
+        
+
         // This method gets called by the runtime. Use this method to add services to the container.
+       // @"database=LUIS-NOTE/3070:C:\Banco de Dados\Bases\atrativa.PLV;user=sysdba;password=masterkey"
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            var ConnectionStrings = Configuration.GetConnectionString("QuickBuyDB");
+            services.AddDbContext<QuickBuyContexto>(option => 
+                             option.UseFirebird(ConnectionStrings,
+                                    m => m.MigrationsAssembly("QuickBuy.Repositorio")));
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

@@ -1,6 +1,6 @@
 ﻿namespace QuickBuy.Repositorio.Repositorios
 {
-    public interface IBaseRepositorio
+    public class BaseRepositorio
     {
     }
 }
