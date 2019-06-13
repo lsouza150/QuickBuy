@@ -11,7 +11,7 @@ namespace QuickBuy.Web.Controllers
     {
         private static string[] Summaries = new[]
         {
-            "Luis", "Bracing", "Carlos", "Cool", "Souza", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Luis Carlos", "Poliview", "Carlos", "Cool", "Souza", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
         [HttpGet("[action]")]
