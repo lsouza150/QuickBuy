@@ -5,6 +5,7 @@ using JetBrains.Annotations;
 using Microsoft.EntityFrameworkCore;
 using QuickBuy.Dominio.Entidades;
 using QuickBuy.Dominio.ObjetodeValor;
+using QuickBuy.Repositorio.Config;
 
 namespace QuickBuy.Repositorio.Contexto
 {
@@ -26,6 +27,16 @@ namespace QuickBuy.Repositorio.Contexto
 
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //Classe de mapeadmento aqui...
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
+            modelBuilder.ApplyConfiguration(new ProdutoConfiguration());
+            modelBuilder.ApplyConfiguration(new PedidoConfigutarion());
+            modelBuilder.ApplyConfiguration(new ItemPedidoConfiguration());
+            modelBuilder.ApplyConfiguration(new FormaPagamentoConfiguration());
+            base.OnModelCreating(modelBuilder);
+        }
 
     }
 }
