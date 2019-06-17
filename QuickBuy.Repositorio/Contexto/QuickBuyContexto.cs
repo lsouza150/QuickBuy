@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using JetBrains.Annotations;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using QuickBuy.Dominio.Entidades;
 using QuickBuy.Dominio.ObjetodeValor;
 using QuickBuy.Repositorio.Config;
@@ -11,19 +7,15 @@ namespace QuickBuy.Repositorio.Contexto
 {
     public class QuickBuyContexto : DbContext
 
-    {
-       
-
+    {     
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<ItemPedido> ItemPedidos { get; set; }
         public DbSet<FormaPagamento> FormaPagemento { get; set; }
 
-
         public QuickBuyContexto(DbContextOptions options) : base(options)
         {
-
 
         }
 
@@ -39,8 +31,22 @@ namespace QuickBuy.Repositorio.Contexto
                        new FormaPagamento()
                        {
                            Id = 1,
-                           Nome = "Pagamento Boleto",
-                       });
+                           Nome = "Boleto",
+                           Descricao  ="Forma de Pagamento Boleto"
+                       } ,
+
+                       new FormaPagamento()
+                       {
+                           Id = 2,
+                           Nome = "Cartão de Crédito",
+                           Descricao = "Forma de Pagamento Cartão de Crédito"
+                       },
+                       new FormaPagamento()
+                       {
+                           Id = 3,
+                           Nome = "Depósito",
+                           Descricao = "Forma de Pagamento Depósito"
+                        }    );
             base.OnModelCreating(modelBuilder);
         }
 
