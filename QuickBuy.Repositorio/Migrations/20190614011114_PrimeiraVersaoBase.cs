@@ -8,7 +8,7 @@ namespace QuickBuy.Repositorio.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "FormaPagemento",
+                name: "FormaPagamento",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false),
@@ -17,7 +17,7 @@ namespace QuickBuy.Repositorio.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_FormaPagemento", x => x.Id);
+                    table.PrimaryKey("PK_FormaPagamento", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -69,9 +69,9 @@ namespace QuickBuy.Repositorio.Migrations
                 {
                     table.PrimaryKey("PK_Pedidos", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Pedidos_FormaPagemento_Form~",
+                        name: "FK_Pedidos_FormaPagamento_Form~",
                         column: x => x.FormaPagamentoId,
-                        principalTable: "FormaPagemento",
+                        principalTable: "FormaPagamento",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -130,7 +130,7 @@ namespace QuickBuy.Repositorio.Migrations
                 name: "Pedidos");
 
             migrationBuilder.DropTable(
-                name: "FormaPagemento");
+                name: "FormaPagamento");
 
             migrationBuilder.DropTable(
                 name: "Usuarios");
