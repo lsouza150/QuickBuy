@@ -138,7 +138,7 @@ namespace QuickBuy.Repositorio.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FormaPagemento");
+                    b.ToTable("FormaPagamento");
                 });
 
             modelBuilder.Entity("QuickBuy.Dominio.Entidades.ItemPedido", b =>
