@@ -62,18 +62,17 @@ namespace QuickBuy.Repositorio.Migrations
                     Cidade = table.Column<string>(maxLength: 100, nullable: false),
                     EnderecoCompleto = table.Column<string>(maxLength: 100, nullable: false),
                     NumeroEndereco = table.Column<int>(nullable: false),
-                    FormapagementoID = table.Column<int>(nullable: false),
-                    FormaPagamentoId = table.Column<int>(nullable: true)
+                    FormapagamentoID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Pedidos", x => x.ID);
                     table.ForeignKey(
                         name: "FK_Pedidos_FormaPagamento_Form~",
-                        column: x => x.FormaPagamentoId,
+                        column: x => x.FormapagamentoID,
                         principalTable: "FormaPagamento",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Pedidos_Usuarios_UsuarioId",
                         column: x => x.UsuarioId,
@@ -108,9 +107,9 @@ namespace QuickBuy.Repositorio.Migrations
                 column: "PedidoID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Pedidos_FormaPagamentoId",
+                name: "IX_Pedidos_FormapagamentoID",
                 table: "Pedidos",
-                column: "FormaPagamentoId");
+                column: "FormapagamentoID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pedidos_UsuarioId",

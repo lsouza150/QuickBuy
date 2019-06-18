@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190614011114_PrimeiraVersaoBase.cs" />
+    <Compile Remove="Migrations\20190614011114_PrimeiraVersaoBase.Designer.cs" />
+    <Compile Remove="Migrations\20190617223839_CargaFormaPagamento.cs" />
+    <Compile Remove="Migrations\20190617223839_CargaFormaPagamento.Designer.cs" />
+    <Compile Remove="Migrations\20190617232639_PrimeiraVersaoBase.cs" />
+    <Compile Remove="Migrations\20190617232639_PrimeiraVersaoBase.Designer.cs" />
+    <Compile Remove="Migrations\20190617235704_PrimeiraVersaoBase.cs" />
+    <Compile Remove="Migrations\20190617235704_PrimeiraVersaoBase.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="6.6.0" />
     <PackageReference Include="FirebirdSql.EntityFrameworkCore.Firebird" Version="6.6.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.3" />

@@ -21,7 +21,7 @@ namespace QuickBuy.Dominio.Entidades
         public string EnderecoCompleto { get; set; }
         public int NumeroEndereco { get; set; }
 
-        public int FormapagementoID { get; set; }
+        public int FormapagamentoID { get; set; }
         public virtual FormaPagamento FormaPagamento { get; set; }
         public virtual ICollection<ItemPedido> ItensPedido { get; set; }
 

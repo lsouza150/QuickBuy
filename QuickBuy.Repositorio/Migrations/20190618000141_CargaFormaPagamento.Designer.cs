@@ -9,8 +9,8 @@ using QuickBuy.Repositorio.Contexto;
 namespace QuickBuy.Repositorio.Migrations
 {
     [DbContext(typeof(QuickBuyContexto))]
-    [Migration("20190614011114_PrimeiraVersaoBase")]
-    partial class PrimeiraVersaoBase
+    [Migration("20190618000141_CargaFormaPagamento")]
+    partial class CargaFormaPagamento
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -62,9 +62,7 @@ namespace QuickBuy.Repositorio.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<int?>("FormaPagamentoId");
-
-                    b.Property<int>("FormapagementoID");
+                    b.Property<int>("FormapagamentoID");
 
                     b.Property<int>("NumeroEndereco");
 
@@ -72,7 +70,7 @@ namespace QuickBuy.Repositorio.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("FormaPagamentoId");
+                    b.HasIndex("FormapagamentoID");
 
                     b.HasIndex("UsuarioId");
 
@@ -140,7 +138,27 @@ namespace QuickBuy.Repositorio.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FormaPagemento");
+                    b.ToTable("FormaPagamento");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Descricao = "Forma de Pagamento Boleto",
+                            Nome = "Boleto"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Descricao = "Forma de Pagamento Cartão de Crédito",
+                            Nome = "Cartão de Crédito"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Descricao = "Forma de Pagamento Depósito",
+                            Nome = "Depósito"
+                        });
                 });
 
             modelBuilder.Entity("QuickBuy.Dominio.Entidades.ItemPedido", b =>
@@ -154,7 +172,8 @@ namespace QuickBuy.Repositorio.Migrations
                 {
                     b.HasOne("QuickBuy.Dominio.ObjetodeValor.FormaPagamento", "FormaPagamento")
                         .WithMany()
-                        .HasForeignKey("FormaPagamentoId");
+                        .HasForeignKey("FormapagamentoID")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("QuickBuy.Dominio.Entidades.Usuario", "Usuario")
                         .WithMany("Pedidos")

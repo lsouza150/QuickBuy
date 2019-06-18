@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using QuickBuy.Dominio.Enumerados;
+﻿using QuickBuy.Dominio.Enumerados;
 
 namespace QuickBuy.Dominio.ObjetodeValor
 {
