@@ -22,13 +22,17 @@ namespace QuickBuy.Repositorio.Repositorios
             throw new NotImplementedException();
         }
 
-       
-
-        public TEntity ObterTodos(int id)
+        public IEnumerable<TEntity> ObterTodos()
         {
             throw new NotImplementedException();
         }
 
+        public TEntity ObterPorId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        
         public void Remover(TEntity entity)
         {
             throw new NotImplementedException();
@@ -38,5 +42,7 @@ namespace QuickBuy.Repositorio.Repositorios
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }
