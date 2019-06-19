@@ -1,1 +1,26 @@
 Consultar no google Sobre TypeScript--> type annotations typescripts   
+------------
+
+/"database=LUIS-NOTE/3070:C:\\Banco de Dados\\Bases\\atrativa.PLV;user=sysdba;password=masterkey"
+Carga Migration Add-Migration CargaFormaPagamento
+Update-Database -Verbose
+
+---
+ typeScript
+Metodos comecam com minusculo 
+Classe  comecam com maisculo
+
+--
+angular cli
+--
+typescript
+https://www.typescriptlang.org/play/index.html
+
+executar o proj.na linha de comomando da pasta do projeto npm start
+C:\novosprojetos\QuickBuy\QuickBuy.Web\ClientApp>npm start
+
+entrar no prompt comando
+npm install -g @angular/cli
+ng new my-dream-app
+cd my-dream-app
+ng serve
