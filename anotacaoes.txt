@@ -24,3 +24,11 @@ npm install -g @angular/cli
 ng new my-dream-app
 cd my-dream-app
 ng serve
+
+
+ Componentes, Serviços e Routing
+
+---git 
+https://github.com/lsouza150/MyFinance.git
+
+https://www.w3schools.com/html/html_forms.asp
