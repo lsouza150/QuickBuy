@@ -1,8 +1,8 @@
 {
   "ConnectionStrings": {
-     "QuickBuyDB": "\"User=SYSDBA;Password=masterkey;Database=LUIS-NOTE/3070:C:\\Banco de Dados\\Bases\\ATRATIVA.PLV;DataSource=LUIS-NOTE;Port=3070;Dialect=3;Charset=NONE;Role=;Pooling=true;MinPoolSize=0;MaxPoolSize=50;PacketSize=8192;"
+    //"QuickBuyDB": "\"User=SYSDBA;Password=masterkey;Database=LUIS-NOTE/3070:C:\\Banco de Dados\\Bases\\ATRATIVA.PLV;DataSource=LUIS-NOTE;Port=3070;Dialect=3;Charset=NONE;Role=;Pooling=true;MinPoolSize=0;MaxPoolSize=50;PacketSize=8192;"
 
-    //"QuickBuyDB": "User=SYSDBA;Password=masterkey;Database=C:\\Banco de Dados\\Bases\\LYX.PLV;DataSource=WS058;Port=3070;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;"
+    "QuickBuyDB": "User=SYSDBA;Password=masterkey;Database=C:\\Banco de Dados\\Bases\\LYX_PROD.PLV;DataSource=WS058;Port=3070;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;"
 
 
 

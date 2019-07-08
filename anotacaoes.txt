@@ -32,3 +32,5 @@ ng serve
 https://github.com/lsouza150/MyFinance.git
 
 https://www.w3schools.com/html/html_forms.asp
+--- Bootstrap 4 Scrollspy imitando as Abas
+   usando  Nav Principal para os modulos e Nav´s Verticais para Sub-Modulos e  Scrollspy para abas dentro nos sub-modulos
