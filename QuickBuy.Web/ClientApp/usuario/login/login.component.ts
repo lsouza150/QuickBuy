@@ -8,12 +8,16 @@ import { Component, TemplateRef } from "@angular/Core";
 })
 
 export class LoginComponent {
+
+
+  public email = "";
+  public senha = "";
+
   entrar() {
-    alert('Entrar no sistema');
+    alert(this.email +" -"+this.senha);
   }
 
-  on_keypress() {
-    alert('Foi digitado no campo de emial')
+ 
 
-  }
+  
 }

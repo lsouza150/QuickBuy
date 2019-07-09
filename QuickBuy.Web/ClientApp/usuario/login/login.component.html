@@ -5,20 +5,21 @@
     <label for="inputEmail" class="sr-only">Email</label>
     <input type="email" id="inputEmail"
            name="email" placeholder="Informe seu Email"
-           class="form-control mb-2" (keypress)="on_keypress()" />
+           class="form-control mb-2"
+           [(ngModel)]="email"/>
 
 
 
     <label for="inputSenha" class="sr-only">Senha</label>
     <input type="password" id="inputSenha"
            name="senha" placeholder="Senha"
-           class="form-control mb-2 " />
+           class="form-control mb-2 "
+            [(ngModel)]="senha"/>
+           
 
 
     <button class="btn btn-primary btn-block" type="submit" (click)="entrar()">Login</button>
-      
-   
-    <img src="../../src/assets/img/LogoPoliview.jpg" />
+     <img src="../../src/assets/img/LogoPoliview.jpg" />
 
   </form>
 
