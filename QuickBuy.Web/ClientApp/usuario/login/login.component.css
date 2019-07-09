@@ -3,6 +3,7 @@ form-signin {
   max-width: 420px;
   padding: 15px;
   margin: auto;
+
 }
 .form-signin input[type="email"]
 {
@@ -13,9 +14,18 @@ form-signin {
 }
 
 .form-signin .form-control {
-  position:relative;
+  position: relative;
   box-sizing: border-box;
   height: auto;
   padding: 10px;
   font-size: 16px;
 }
+
+.login{
+  color:darkblue;
+}
+
+.btn {
+  color: darkblue;
+}
+
