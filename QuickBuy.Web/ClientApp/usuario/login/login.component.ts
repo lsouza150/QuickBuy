@@ -1,4 +1,5 @@
 import { Component, TemplateRef } from "@angular/Core";
+import { Usuario } from "../../src/app/modelo/usuario";
 
 @Component({
   selector: "api-login",
@@ -9,12 +10,23 @@ import { Component, TemplateRef } from "@angular/Core";
 
 export class LoginComponent {
 
+  public usuario = new Usuario();
+  public usuarioAutenticado: boolean;
 
-  public email = "";
-  public senha = "";
+  public usuarios = ["usuario", "usuario2", "usuario3", "usuario4", "usuario3"];
+
+   
+
+  constructor() {
+    this.usuario = new Usuario();
+  }
+
+ 
 
   entrar() {
-    alert(this.email +" -"+this.senha);
+    if (this.usuario.email == "luis_csouza@uol.com.br" && this.usuario.senha == "123") {
+      this.usuarioAutenticado = true;
+    }
   }
 
  
