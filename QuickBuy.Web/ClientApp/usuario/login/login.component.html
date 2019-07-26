@@ -6,7 +6,22 @@
     <input type="email" id="inputEmail"
            name="email" placeholder="Informe seu Email"
            class="form-control mb-2"
-           [(ngModel)]="usuario.email" />
+           [(ngModel)]="usuario.email"
+           #email="ngModel"
+           email
+           required />
+
+    <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+
+      <div *ngIf="email.errors.required">
+        Email deve ser preenchido
+      </div>
+
+      <div *ngIf="email.errors.email">
+        Email não está no formato correto
+      </div>
+
+    </div>
 
 
 
@@ -14,24 +29,28 @@
     <input type="password" id="inputSenha"
            name="senha" placeholder="Senha"
            class="form-control mb-2 "
-           [(ngModel)]="usuario.senha" />
+           [(ngModel)]="usuario.senha"
+           #senha="ngModel"
+           required />
+
+    <div class="alert alert-danger" *ngIf="sennha.invalid && (senha.dirty || senha.touched)">
+
+      <div *ngIf="senha.errors.required">
+        Senha deve ser preenchido
+      </div>
+
+      
+
+    </div>
 
 
 
     <button class="btn btn-primary btn-block" type="submit" (click)="entrar()">Login</button>
     <img src="../../src/assets/img/LogoPoliview.jpg" />
 
-    <!* =  diretiva ngif ngfot>
-    <div class="alert alert-primary" role="alert" *ngIf="usuarioAutenticado">
-      Usuario Autenticado !
-    </div>
 
-    <div class="alert alert-warning" role="alert">
-      <div *ngFor="let i of usuarios">
-        {{i}}
-      </div>
 
-    </div>
+
 
   </form>
 

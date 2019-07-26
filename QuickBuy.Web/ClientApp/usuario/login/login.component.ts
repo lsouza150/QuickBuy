@@ -11,10 +11,7 @@ import { Usuario } from "../../src/app/modelo/usuario";
 export class LoginComponent {
 
   public usuario = new Usuario();
-  public usuarioAutenticado: boolean;
-
-  public usuarios = ["usuario", "usuario2", "usuario3", "usuario4", "usuario3"];
-
+ 
    
 
   constructor() {
@@ -25,7 +22,7 @@ export class LoginComponent {
 
   entrar() {
     if (this.usuario.email == "luis_csouza@uol.com.br" && this.usuario.senha == "123") {
-      this.usuarioAutenticado = true;
+      
     }
   }
 
