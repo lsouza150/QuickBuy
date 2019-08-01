@@ -1,4 +1,4 @@
-import { Component, TemplateRef } from "@angular/Core";
+import { Component } from "@angular/Core";
 import { Usuario } from "../../src/app/modelo/usuario";
 
 @Component({
@@ -10,9 +10,8 @@ import { Usuario } from "../../src/app/modelo/usuario";
 
 export class LoginComponent {
 
-  public usuario = new Usuario();
- 
-   
+  public usuario ;
+  public usuarioAutenticado: boolean;
 
   constructor() {
     this.usuario = new Usuario();
@@ -22,7 +21,7 @@ export class LoginComponent {
 
   entrar() {
     if (this.usuario.email == "luis_csouza@uol.com.br" && this.usuario.senha == "123") {
-      
+      this.usuarioAutenticado = true;
     }
   }
 
