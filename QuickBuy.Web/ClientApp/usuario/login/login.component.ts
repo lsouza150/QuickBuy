@@ -12,7 +12,7 @@ export class LoginComponent {
 
   public usuario ;
   public usuarioAutenticado: boolean;
-
+  
   constructor() {
     this.usuario = new Usuario();
   }
