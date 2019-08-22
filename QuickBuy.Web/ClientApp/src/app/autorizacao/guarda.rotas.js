@@ -11,3 +11,10 @@ var GuardaRotas = /** @class */ (function () {
 }());
 exports.GuardaRotas = GuardaRotas;
 //# sourceMappingURL=guarda.rotas.js.map
+
+//<div class="alert alert-danger" * ngIf="email.invalid && (email.dirty || email.touched)" >
+//  <div * ngIf="email.errors.requirid" >
+ //   Email deve ser preenchido!!
+//      </div >
+
+//    </div >

@@ -1,6 +1,6 @@
-import { Component } from "@angular/Core";
+import { Component, OnInit } from "@angular/Core";
 import { Usuario } from "../../src/app/modelo/usuario";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "api-login",
@@ -9,26 +9,25 @@ import { Router } from "@angular/router";
 
 })
 
-export class LoginComponent {
-
+export class LoginComponent  implements OnInit {
+   
   public usuario;
-  
-  
-  constructor(private router:Router) {
+  public returnUrl: String;
+   
+  constructor(private router:Router, private activatedRouter: ActivatedRoute) {
+       
+  }
+
+  ngOnInit(): void {
+    this.returnUrl = this.activatedRouter.snapshot.queryParams['returnUrl'];
     this.usuario = new Usuario();
   }
-
- 
-
   entrar() {
     if (this.usuario.email == "luis_csouza@uol.com.br" && this.usuario.senha == "123") {
-      localStorage.setItem("usuario-autenticado", "1");
-     //this.router.navigate(['/'])
-    
+      sessionStorage.setItem("usuario-autenticado", "1");
+      this.router.navigate([this.returnUrl]);
+      
     }
   }
-
  
-
-  
 }
