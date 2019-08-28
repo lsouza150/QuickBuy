@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/Core";
 import { Usuario } from "../../src/app/modelo/usuario";
 import { Router, ActivatedRoute } from "@angular/router";
+import { UsuarioServico } from "../../src/app/servicos/usuario/usuario.servico";
 
 @Component({
   selector: "api-login",
@@ -14,7 +15,8 @@ export class LoginComponent  implements OnInit {
   public usuario;
   public returnUrl: String;
    
-  constructor(private router:Router, private activatedRouter: ActivatedRoute) {
+  constructor(private router: Router, private activatedRouter: ActivatedRoute,
+              private usuarioServico: UsuarioServico) {
        
   }
 
@@ -23,11 +25,19 @@ export class LoginComponent  implements OnInit {
     this.usuario = new Usuario();
   }
   entrar() {
-    if (this.usuario.email == "luis_csouza@uol.com.br" && this.usuario.senha == "123") {
-      sessionStorage.setItem("usuario-autenticado", "1");
-      this.router.navigate([this.returnUrl]);
+     
+    this.usuarioServico.verificaUsuario(this.usuario).subscribe(
+
       
-    }
+
+    //PRogramação Reativa
+    );
+    
+
+    //if (this.usuario.email == "luis_csouza@uol.com.br" && this.usuario.senha == "123") {
+    //  sessionStorage.setItem("usuario-autenticado", "1");
+    //  this.router.navigate([this.returnUrl]);
+     // }
   }
  
 }

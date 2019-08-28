@@ -6,10 +6,10 @@ import { Usuario } from "../../modelo/usuario";
 @Injectable({
   providedIn: "root"
 })
-export class UsuarioServico{
+export class UsuarioServico {
 
   private baseURL: string;
-  constructor(private http: HttpClient, @inject ('BASE_URL') BaseUrl :string) {
+  constructor(private http: HttpClient, @inject('BASE_URL') BaseUrl: string) {
     this.baseURL = BaseUrl;
   }
 
@@ -25,4 +25,4 @@ export class UsuarioServico{
     return this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers });
   }
 
-
+}
