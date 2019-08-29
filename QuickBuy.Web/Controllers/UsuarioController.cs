@@ -6,6 +6,7 @@ namespace QuickBuy.Web.Controllers
 {
     public class UsuarioController :Controller
     {
+        [Route("api/[Controller]")]
 
         [HttpGet]
         public ActionResult Get()

@@ -26,10 +26,15 @@ export class LoginComponent  implements OnInit {
   }
   entrar() {
      
-    this.usuarioServico.verificaUsuario(this.usuario).subscribe(
+    this.usuarioServico.verificaUsuario(this.usuario)
+      .subscribe(
+   
+        data => {
 
-      
+        },
+        err => {
 
+        }
     //PRogramação Reativa
     );
     
