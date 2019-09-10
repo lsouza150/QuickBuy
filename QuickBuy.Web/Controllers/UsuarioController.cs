@@ -28,7 +28,7 @@ namespace QuickBuy.Web.Controllers
         {
             try
             {
-                if (usuario.Email == "luis_csouza@uol.com.br" && usuario.Senha == "abc123")
+                if (usuario.Email == "luis_csouza@uol.com.br" && usuario.Senha == "123")
                     return Ok(usuario);
                 
                 return BadRequest("Usuário ou senha inválido");

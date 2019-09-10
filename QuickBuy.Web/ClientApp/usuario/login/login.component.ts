@@ -39,10 +39,7 @@ export class LoginComponent  implements OnInit {
     );
     
 
-    //if (this.usuario.email == "luis_csouza@uol.com.br" && this.usuario.senha == "123") {
-    //  sessionStorage.setItem("usuario-autenticado", "1");
-    //  this.router.navigate([this.returnUrl]);
-     // }
+    
   }
  
 }

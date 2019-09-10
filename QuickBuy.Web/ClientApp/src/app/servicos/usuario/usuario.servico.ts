@@ -1,4 +1,4 @@
-import { Injectable, inject } from "@angular/core";
+import { Injectable, Inject } from "@angular/core";
 import { HttpClient,HttpHandler, HttpHeaders } from "@angular/common/http";
 import { observable, Observable } from "rxjs";
 import { Usuario } from "../../modelo/usuario";
@@ -9,7 +9,7 @@ import { Usuario } from "../../modelo/usuario";
 export class UsuarioServico {
 
   private baseURL: string;
-  constructor(private http: HttpClient, @inject('BASE_URL') BaseUrl: string) {
+  constructor(private http: HttpClient, @Inject('BASE_URL') BaseUrl: string) {
     this.baseURL = BaseUrl;
   }
 
@@ -22,7 +22,7 @@ export class UsuarioServico {
     }
 
     //this.baseUrl = raiz do  site que pode ser exemplo : wwww.quickbay.com.br
-    return this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers });
+    return this.http.post<Usuario>(this.baseURL + "api/usuario/verificarUsuario", body, { headers });
   }
 
 }
