@@ -9,13 +9,13 @@ import { Usuario } from "../../modelo/usuario";
 export class UsuarioServico {
 
   private baseURL: string;
-  constructor(private http: HttpClient, @Inject('BASE_URL') BaseUrl: string) {
-    this.baseURL = BaseUrl;
+  constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+    this.baseURL = baseUrl;
   }
 
   public verificaUsuario(usuario: Usuario): Observable<Usuario> {
 
-    const headers = new HttpHeaders().set('content-type', 'appication/json');
+    const headers = new HttpHeaders().set('content-type', 'appication/jsom');
     var body = {
       email: usuario.email,
       senha: usuario.senha

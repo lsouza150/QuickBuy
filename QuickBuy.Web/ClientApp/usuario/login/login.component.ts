@@ -30,9 +30,11 @@ export class LoginComponent  implements OnInit {
       .subscribe(
    
         data => {
+          console.log(data);
 
         },
         err => {
+          console.log(err.error)
 
         }
     //PRogramação Reativa
